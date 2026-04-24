@@ -51,6 +51,35 @@ metadata:
   name: app-master-ingress
   annotations:
     nginx.org/mergeable-ingress-type: "master"
+    nginx.org/server-snippets: |
+      location = /auth {
+        internal;
+
+        if ($request_method = OPTIONS) {
+          return 200;
+        }
+
+        proxy_pass https://example.com/auth;
+        proxy_method GET;
+
+        proxy_pass_request_headers on;
+        proxy_pass_request_body off;
+
+        proxy_set_header Content-Length "";
+        proxy_set_header Host example.com;
+        proxy_set_header Authorization $http_authorization;
+        proxy_set_header Cookie $http_cookie;
+
+        proxy_set_header X-Original-URI $request_uri;
+        proxy_set_header X-Original-Method $request_method;
+
+        proxy_ssl_server_name on;
+        proxy_ssl_name example.com;
+      }
+
+      location @error401 {
+        return 302 https://example.com/login;
+      }
 spec:
   ingressClassName: nginx
   rules:

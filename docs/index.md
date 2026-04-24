@@ -1,124 +1,120 @@
 # Welcome to My Portfolio
 
-# 🚀 Mohammed Suhail
+# Mohammed Suhail
 
 ## Platform & DevOps Engineer | Kubernetes | AWS | Azure
 
-Building and operating **scalable, resilient, and production-grade cloud platforms** across AWS and Azure.
+Building and operating scalable, resilient, and production-grade cloud platforms across AWS and Azure.
 
 ---
 
-## 👋 About Me
+## About Me
 
-I’m a Platform Engineer with **2+ years of hands-on experience** designing and managing cloud-native infrastructure.
+Platform Engineer with 2+ years of hands-on experience designing and managing cloud-native infrastructure.
 
-I specialize in:
+Specialized in:
 - Kubernetes (EKS & AKS)
 - Infrastructure as Code (Terraform, Terragrunt)
-- CI/CD & GitOps (GitHub Actions, ArgoCD, Helm)
+- CI/CD and GitOps (GitHub Actions, ArgoCD, Helm)
 - Observability (Prometheus, Grafana, Loki)
 
-I focus on building systems that are:
-- ⚡ Highly scalable  
-- 🔁 Fully automated  
-- 🛡️ Secure by design  
-- 📊 Observable and reliable  
+Focused on building systems that are scalable, automated, secure, and highly observable.
 
 ---
 
-## ⚡ Key Achievements
+## Key Achievements
 
-- 🚀 Handled **20M+ user traffic** with optimized Kubernetes autoscaling  
-- ⚙️ Managed **production-grade EKS & AKS clusters** across multiple environments  
-- 🔁 Built **GitOps pipelines for 20+ microservices** using ArgoCD & Helm  
-- 📊 Designed full observability stack (Prometheus, Grafana, Loki)  
-- 🛡️ Implemented security using IAM, TLS, NGINX WAF, and Trivy  
+- Handled 20M+ user traffic with optimized Kubernetes autoscaling  
+- Managed production-grade EKS and AKS clusters across multiple environments  
+- Built GitOps pipelines for 20+ microservices using ArgoCD and Helm  
+- Designed and implemented observability stack using Prometheus, Grafana, and Loki  
+- Strengthened platform security using IAM, TLS, NGINX WAF, and Trivy  
 
 ---
 
-## 🧱 What This Portfolio Contains
+## What This Portfolio Contains
 
 This portfolio is a collection of:
 
-### 📘 Engineering Notes
+### Engineering Notes
 Deep dives into Kubernetes, networking, and DevOps concepts.
 
-### ⚙️ Real-World Implementations
+### Real-World Implementations
 Step-by-step setups and production-ready configurations.
 
-### 🧩 Troubleshooting Guides
+### Troubleshooting Guides
 Solutions to real issues faced in cloud and Kubernetes environments.
 
 ---
 
-## 💼 Professional Experience
+## Professional Experience
 
 ### Platform Engineer  
-**BlueOcean Digital India Pvt Ltd**  
-*June 2024 – Present*
+BlueOcean Digital India Pvt Ltd  
+June 2024 – Present
 
-- Owned **end-to-end Kubernetes platform operations** (EKS & AKS)  
-- Designed **GitOps CI/CD pipelines** for scalable deployments  
-- Automated infrastructure using **Terraform & Terragrunt**  
-- Built observability systems reducing incident resolution time  
+- Owned end-to-end Kubernetes platform operations (EKS & AKS)  
+- Designed GitOps CI/CD pipelines for scalable deployments  
+- Automated infrastructure using Terraform and Terragrunt  
+- Built observability systems improving incident response time  
 - Optimized autoscaling for high-traffic production workloads  
 
 ---
 
 ### Cloud Architect  
-**Avanexa Technologies**  
-*Sept 2023 – May 2024*
+Avanexa Technologies  
+Sept 2023 – May 2024
 
-- Managed **multi-client AWS environments**  
-- Designed CI/CD frameworks  
-- Implemented IAM and TLS-based security  
-- Delivered scalable and highly available architectures  
-
----
-
-## 🛠️ Core Skills
-
-**Cloud:** AWS, Azure  
-**Containers:** Kubernetes, Docker  
-**CI/CD:** GitHub Actions, ArgoCD, Helm  
-**IaC:** Terraform, Terragrunt  
-**Monitoring:** Prometheus, Grafana, Loki  
-**Security:** IAM, TLS, WAF, Trivy  
+- Managed multi-client AWS environments  
+- Designed and implemented CI/CD pipelines  
+- Enforced IAM and TLS-based security practices  
+- Delivered scalable and highly available cloud architectures  
 
 ---
 
-## 📂 Featured Work (Coming Soon)
+## Core Skills
 
-- 🔹 Kubernetes Autoscaling Optimization (20M+ traffic)
-- 🔹 GitOps CI/CD with ArgoCD & Helm
-- 🔹 Terraform Multi-Cloud Infrastructure Setup
-- 🔹 Observability Stack Implementation
+Cloud: AWS, Azure  
+Containers: Kubernetes, Docker  
+CI/CD: GitHub Actions, ArgoCD, Helm  
+Infrastructure as Code: Terraform, Terragrunt  
+Monitoring: Prometheus, Grafana, Loki  
+Security: IAM, TLS, WAF, Trivy  
 
 ---
 
-## 🏆 Certification
+## Featured Work (Coming Soon)
 
-**Certified Kubernetes Administrator (CKA)**  
+- Kubernetes Autoscaling Optimization (20M+ traffic)
+- GitOps CI/CD with ArgoCD and Helm
+- Terraform Multi-Cloud Infrastructure Setup
+- Observability Stack Implementation
+
+---
+
+## Certification
+
+Certified Kubernetes Administrator (CKA)  
 https://www.credly.com/badges/cb839aca-c1bc-4066-a521-e6dd2029ce27  
 
 ---
 
-## 📫 Connect With Me
+## Connect With Me
 
-- GitHub: https://github.com/your-username  
-- LinkedIn: (Add your profile)
+GitHub: https://github.com/your-username  
+LinkedIn: (Add your profile)
 
 ---
 
-## ⚡ Focus Areas
+## Focus Areas
 
 - Production-grade Kubernetes platforms  
-- High availability & scaling strategies  
-- DevOps automation & GitOps workflows  
+- High availability and scaling strategies  
+- DevOps automation and GitOps workflows  
 - Performance optimization under heavy load  
 
 ---
 
-⭐ *This portfolio reflects my real-world experience building and operating cloud systems at scale.*
+This portfolio reflects real-world experience building and operating cloud systems at scale.
 
 [linkedin](https://www.linkedin.com/in/mohammedsuhail-cloud/)

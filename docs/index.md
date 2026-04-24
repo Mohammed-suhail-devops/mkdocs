@@ -95,14 +95,13 @@ Security: IAM, TLS, WAF, Trivy
 ## Certification
 
 Certified Kubernetes Administrator (CKA)  
-https://www.credly.com/badges/cb839aca-c1bc-4066-a521-e6dd2029ce27  
+(https://www.credly.com/badges/cb839aca-c1bc-4066-a521-e6dd2029ce27)
 
 ---
 
 ## Connect With Me
 
-GitHub: https://github.com/your-username  
-LinkedIn: (Add your profile)
+LinkedIn: (https://www.linkedin.com/in/mohammedsuhail-cloud/)
 
 ---
 
@@ -117,4 +116,3 @@ LinkedIn: (Add your profile)
 
 This portfolio reflects real-world experience building and operating cloud systems at scale.
 
-[linkedin](https://www.linkedin.com/in/mohammedsuhail-cloud/)

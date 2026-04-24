@@ -106,7 +106,7 @@ spec:
 
 ## 6. Internal Authentication Endpoint
 
-You must define an internal location for auth:
+You must define an internal location for auth under master ingress annotations:
 
 ```yaml
 nginx.org/server-snippets: |

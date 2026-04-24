@@ -1,4 +1,4 @@
-# 🚀 Kubernetes Ingress Migration: Community NGINX → F5 NGINX
+#   Kubernetes Ingress Migration: Community NGINX → F5 NGINX
 
 ## 📌 Overview
 

@@ -301,6 +301,12 @@ This approach enables:
 * Reliable and production-ready ingress design
 
 ---
+# 15. Flow Diagram
+
+<img width="1536" height="1024" alt="Auth request" src="https://github.com/user-attachments/assets/4218a7b1-a03c-43e9-b9b6-aa76698a9dde" />
+
+
+---
 
 # ✔️ Final Result
 
@@ -310,10 +316,5 @@ This version now clearly demonstrates:
 * Kubernetes ingress design skills
 * Authentication architecture understanding
 
----
 
-If you want next:
-
-* I can create a **visual architecture diagram (very useful for interviews)**
-* Or convert this into a **blog-style story for your portfolio**
 

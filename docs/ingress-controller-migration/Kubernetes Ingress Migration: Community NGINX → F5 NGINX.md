@@ -134,17 +134,8 @@ nginx.org/lb-method: "round_robin"
 ### 🔹 SSL Redirect Control
 
 ```yaml
-ingress.kubernetes.io/ssl-redirect: "false"
+nginx.org/ssl-redirect: "false"
 ```
-
----
-
-### 🔹 IP Whitelisting
-
-```yaml
-nginx.ingress.kubernetes.io/whitelist-source-range: "x.x.x.x/32"
-```
-
 ---
 
 ## 🔄 Key Improvements

@@ -1,6 +1,6 @@
 # Welcome to My Portfolio
 
-# 🚀 Mohammed Suhail | Platform & DevOps Engineer
+#  Mohammed Suhail | Platform & DevOps Engineer
 
 Hi 👋 I'm **Mohammed Suhail**, a Platform & DevOps Engineer with hands-on experience building, scaling, and securing cloud-native infrastructure across AWS and Azure.
 

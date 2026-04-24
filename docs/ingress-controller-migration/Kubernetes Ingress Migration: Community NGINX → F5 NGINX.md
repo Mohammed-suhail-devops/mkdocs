@@ -1,12 +1,12 @@
 #   Kubernetes Ingress Migration: Community NGINX → F5 NGINX
 
-## 📌 Overview
+##  Overview
 
 Migrated from the community NGINX Ingress Controller to F5 NGINX Ingress Controller to improve scalability, routing control, and maintainability.
 
 ---
 
-## 🎯 Key Objectives
+##  Key Objectives
 
 * Replace community ingress with an enterprise-grade solution
 * Introduce structured ingress design (Master/Minion)
@@ -14,7 +14,7 @@ Migrated from the community NGINX Ingress Controller to F5 NGINX Ingress Control
 
 ---
 
-## 🏗️ Architecture Change
+##  Architecture Change
 
 ### Before
 
@@ -34,7 +34,7 @@ Migrated from the community NGINX Ingress Controller to F5 NGINX Ingress Control
 
 ---
 
-## ⚙️ Installation (OCI Helm)
+##  Installation (OCI Helm)
 
 ```bash
 helm install nginx-ingress oci://ghcr.io/nginx/charts/nginx-ingress --version 2.5.1
@@ -48,7 +48,7 @@ kubectl get ingressclasses
 
 ---
 
-## 📄 Sample Configuration
+##  Sample Configuration
 
 ### Master Ingress
 
@@ -69,9 +69,9 @@ annotations:
 
 ---
 
-## ⚙️ F5 NGINX Key Annotations
+##  F5 NGINX Key Annotations
 
-### 🔹 Mergeable Ingress
+###  Mergeable Ingress
 
 ```yaml
 nginx.org/mergeable-ingress-type: "master"
@@ -80,7 +80,7 @@ nginx.org/mergeable-ingress-type: "minion"
 
 ---
 
-### 🔹 Timeout Configuration
+###  Timeout Configuration
 
 ```yaml
 nginx.org/proxy-connect-timeout: "360s"
@@ -90,7 +90,7 @@ nginx.org/proxy-send-timeout: "360s"
 
 ---
 
-### 🔹 Path Handling
+###  Path Handling
 
 ```yaml
 nginx.org/path-regex: "case_sensitive"
@@ -98,7 +98,7 @@ nginx.org/path-regex: "case_sensitive"
 
 ---
 
-### 🔹 Request Size Limit
+###  Request Size Limit
 
 ```yaml
 nginx.org/client-max-body-size: "50m"
@@ -106,7 +106,7 @@ nginx.org/client-max-body-size: "50m"
 
 ---
 
-### 🔹 Buffer Configuration
+###  Buffer Configuration
 
 ```yaml
 nginx.org/proxy-buffer-size: "16k"
@@ -115,7 +115,7 @@ nginx.org/proxy-buffers: "4 16k"
 
 ---
 
-### 🔹 Rate Limiting
+###  Rate Limiting
 
 ```yaml
 nginx.org/limit-req-rate: "10r/s"
@@ -123,7 +123,7 @@ nginx.org/limit-req-rate: "10r/s"
 
 ---
 
-### 🔹 Load Balancing Method
+###  Load Balancing Method
 
 ```yaml
 nginx.org/lb-method: "round_robin"
@@ -131,14 +131,14 @@ nginx.org/lb-method: "round_robin"
 
 ---
 
-### 🔹 SSL Redirect Control
+###  SSL Redirect Control
 
 ```yaml
 nginx.org/ssl-redirect: "false"
 ```
 ---
 
-## 🔄 Key Improvements
+##  Key Improvements
 
 * Structured ingress design
 * Better separation of concerns
@@ -147,7 +147,7 @@ nginx.org/ssl-redirect: "false"
 
 ---
 
-## ⚖️ Comparison
+##  Comparison
 
 | Feature         | Community NGINX | F5 NGINX      |
 | --------------- | --------------- | ------------- |
@@ -158,7 +158,7 @@ nginx.org/ssl-redirect: "false"
 
 ---
 
-## 🐞 Challenges Solved
+##  Challenges Solved
 
 * Fixed domain routing issues
 * Resolved NGINX reload failures
@@ -167,7 +167,7 @@ nginx.org/ssl-redirect: "false"
 
 ---
 
-## 🧪 Validation
+##  Validation
 
 ```bash
 kubectl get ingress
@@ -177,7 +177,7 @@ curl http://app.example.com/api
 
 ---
 
-## 📈 Outcome
+##  Outcome
 
 * Production-ready ingress setup
 * Reduced configuration complexity
@@ -185,7 +185,7 @@ curl http://app.example.com/api
 
 ---
 
-## 🧠 Key Learnings
+##  Key Learnings
 
 * Separate host and path responsibilities
 * Avoid wildcard routing when possible
@@ -194,6 +194,6 @@ curl http://app.example.com/api
 
 ---
 
-## ✅ Summary
+##  Summary
 
 This migration improved reliability and scalability by adopting a structured ingress model using F5 NGINX, making it suitable for enterprise Kubernetes environments.

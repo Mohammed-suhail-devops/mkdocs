@@ -8,7 +8,7 @@ Migrated from the community NGINX Ingress Controller to F5 NGINX Ingress Control
 
 ## 🎯 Key Objectives
 
-* Replace community ingress with enterprise-grade solution
+* Replace community ingress with an enterprise-grade solution
 * Introduce structured ingress design (Master/Minion)
 * Improve routing clarity and reduce conflicts
 

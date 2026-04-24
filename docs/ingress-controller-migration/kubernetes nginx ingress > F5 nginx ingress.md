@@ -303,8 +303,7 @@ This approach enables:
 ---
 # 15. Flow Diagram
 
-<img width="1536" height="1024" alt="Auth request" src="https://github.com/user-attachments/assets/4218a7b1-a03c-43e9-b9b6-aa76698a9dde" />
-
+<img width="3062" height="2048" alt="Auth" src="https://github.com/user-attachments/assets/1e3dcbb0-e979-4f38-90ad-2c5190a29ccd" />
 
 ---
 

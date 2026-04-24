@@ -1,12 +1,3 @@
-* Master/Minion ingress setup (F5)
-* Authentication using `auth_request.`
-* Generic example headers (safe for public sharing)
-* Clear explanation of flow
-
-You can use this directly in your GitHub repo.
-
----
-
 # F5 NGINX Ingress Authentication with Master/Minion Architecture
 
 ## 1. Overview

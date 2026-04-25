@@ -94,7 +94,7 @@ The technical challenges are fascinating: distributed systems, networking, secur
 Interested in discussing platform engineering challenges or opportunities?
 
 - **LinkedIn**: [mohammedsuhail-cloud](https://www.linkedin.com/in/mohammedsuhail-cloud/)
-- **Email**: [mohammed.suhail.cloud@gmail.com](mailto:mohammed.suhail.cloud@gmail.com)
+- **Email**: [suhailakofficial@gmail.com](mailto:suhailakofficial@gmail.com)
 
 ---
 

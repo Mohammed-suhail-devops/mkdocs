@@ -1,53 +1,35 @@
 # Skills & Certifications
 
-<div class="skills-hero">
-  <p class="skills-intro">
-    A comprehensive overview of technical skills, tools, and certifications that power production-ready platform engineering.
-  </p>
-</div>
+**A comprehensive overview of technical skills, tools, and certifications that power production-ready platform engineering.**
+
+---
 
 ## Core Competencies
 
-<div class="competency-grid">
-  <div class="competency-card">
-    <h3>🎯 Container Orchestration</h3>
-    <ul>
-      <li><strong>Kubernetes</strong> - EKS, AKS production operations</li>
-      <li><strong>Docker</strong> - Container building and optimization</li>
-      <li><strong>Helm</strong> - Chart development and management</li>
-      <li><strong>Argo CD</strong> - GitOps deployments</li>
-    </ul>
-  </div>
+### 🎯 Container Orchestration
+- **Kubernetes** - EKS, AKS production operations
+- **Docker** - Container building and optimization
+- **Helm** - Chart development and management
+- **Argo CD** - GitOps deployments
 
-  <div class="competency-card">
-    <h3>☁️ Cloud Platforms</h3>
-    <ul>
-      <li><strong>Azure</strong> - AKS, ACR, Key Vault, Front Door, APIM</li>
-      <li><strong>AWS</strong> - EKS, EC2, VPC, RDS, S3</li>
-      <li><strong>Multi-cloud</strong> - Cross-platform patterns</li>
-    </ul>
-  </div>
+### ☁️ Cloud Platforms
+- **Azure** - AKS, ACR, Key Vault, Front Door, APIM
+- **AWS** - EKS, EC2, VPC, RDS, S3
+- **Multi-cloud** - Cross-platform patterns
 
-  <div class="competency-card">
-    <h3>🏗️ Infrastructure as Code</h3>
-    <ul>
-      <li><strong>Terraform</strong> - Module design, provider expertise</li>
-      <li><strong>Terragrunt</strong> - DRY orchestration patterns</li>
-      <li><strong>GitHub Actions</strong> - CI/CD workflows</li>
-      <li><strong>GitOps</strong> - Declarative deployments</li>
-    </ul>
-  </div>
+### 🏗️ Infrastructure as Code
+- **Terraform** - Module design, provider expertise
+- **Terragrunt** - DRY orchestration patterns
+- **CI/CD** - Automated workflows and pipelines
+- **GitOps** - Declarative deployments
 
-  <div class="competency-card">
-    <h3>📊 Observability</h3>
-    <ul>
-      <li><strong>Prometheus</strong> - Metrics collection and alerting</li>
-      <li><strong>Grafana</strong> - Dashboard design and visualization</li>
-      <li><strong>Loki</strong> - Log aggregation</li>
-      <li><strong>Azure Monitor</strong> - Diagnostic settings</li>
-    </ul>
-  </div>
-</div>
+### 📊 Observability
+- **Prometheus** - Metrics collection and alerting
+- **Grafana** - Dashboard design and visualization
+- **Loki** - Log aggregation
+- **Azure Monitor** - Diagnostic settings
+
+---
 
 ## Technical Skills Matrix
 
@@ -59,7 +41,7 @@
 | Terraform | 5+ years | Module architecture, state management, provider development |
 | Azure | 4+ years | AKS, ACR, networking, security, managed services |
 | Docker | 5+ years | Multi-stage builds, optimization, security scanning |
-| GitHub Actions | 3+ years | Infrastructure CI/CD, automated deployments, workflow design |
+| CI/CD Pipelines | 3+ years | Infrastructure automation, deployment workflows, release management |
 
 ### Advanced Level ⭐⭐⭐⭐
 
@@ -82,44 +64,34 @@
 | Python | 3+ years | Automation scripts, tooling, infrastructure testing |
 | Bash/Shell | 5+ years | Automation, CI/CD scripts, operational tooling |
 
+---
+
 ## Certifications
 
-<div class="cert-showcase">
-  <div class="cert-card featured">
-    <div class="cert-badge">🏆</div>
-    <h3>Certified Kubernetes Administrator (CKA)</h3>
-    <p class="cert-issuer">Cloud Native Computing Foundation (CNCF)</p>
-    <p class="cert-description">
-      Validates expertise in Kubernetes cluster administration, including installation, configuration, management, troubleshooting, and application lifecycle.
-    </p>
-    <ul class="cert-skills">
-      <li>Cluster architecture and installation</li>
-      <li>Workload scheduling and management</li>
-      <li>Services and networking</li>
-      <li>Storage and persistent volumes</li>
-      <li>Security and RBAC</li>
-      <li>Troubleshooting</li>
-    </ul>
-  </div>
+### 🏆 Certified Kubernetes Administrator (CKA)
+**Cloud Native Computing Foundation (CNCF)**
 
-  <div class="cert-card">
-    <div class="cert-badge">✅</div>
-    <h3>Platform Engineering Expertise</h3>
-    <p class="cert-issuer">Production-Validated</p>
-    <p class="cert-description">
-      Real-world experience building and operating platforms supporting 20M+ traffic scale with 20+ microservices in production.
-    </p>
-  </div>
+Validates expertise in Kubernetes cluster administration, including installation, configuration, management, troubleshooting, and application lifecycle.
 
-  <div class="cert-card">
-    <div class="cert-badge">✅</div>
-    <h3>Infrastructure as Code Mastery</h3>
-    <p class="cert-issuer">Production-Validated</p>
-    <p class="cert-description">
-      Extensive terraform and terragrunt module development with multi-environment orchestration patterns in production use.
-    </p>
-  </div>
-</div>
+**Key Areas:**
+- Cluster architecture and installation
+- Workload scheduling and management
+- Services and networking
+- Storage and persistent volumes
+- Security and RBAC
+- Troubleshooting
+
+### ✅ Platform Engineering Expertise
+**Production-Validated**
+
+Real-world experience building and operating platforms supporting 20M+ traffic scale with 20+ microservices in production.
+
+### ✅ Infrastructure as Code Mastery
+**Production-Validated**
+
+Extensive Terraform and Terragrunt module development with multi-environment orchestration patterns in production use.
+
+---
 
 ## Specialized Knowledge
 
@@ -169,7 +141,7 @@
 ## Tools & Platforms
 
 ### Development & Version Control
-- Git, GitHub, GitHub Actions
+- Git, version control best practices
 - VS Code, IntelliJ IDEA
 - Docker Desktop, Kind, Minikube
 
@@ -205,7 +177,8 @@ I stay current with:
 
 ---
 
-<div class="skills-cta">
-  <p><strong>Want to know more about how these skills apply to your platform challenges?</strong></p>
-  <a href="../contact/" class="md-button md-button--primary">Let's Discuss</a>
-</div>
+## Next Steps
+
+**Want to know more about how these skills apply to your platform challenges?**
+
+[Let's Discuss](../contact/){ .md-button .md-button--primary }

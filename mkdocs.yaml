@@ -60,14 +60,11 @@ extra_css:
 extra:
   generator: false
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/mohammed-suhail-devops
-      name: GitHub Profile
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/mohammedsuhail-cloud/
       name: LinkedIn Profile
     - icon: fontawesome/solid/envelope
-      link: mailto:mohammed.suhail.cloud@gmail.com
+      link: mailto:suhailakofficial@gamil.com
       name: Email Contact
   
   # Google Analytics
@@ -173,23 +170,3 @@ nav:
       - VNet Peering: Azure/modules/vnet-peering/README.md
       - Cross-Environment Peering: Azure/modules/nonprod-aks-postgres-prod-peering/README.md
   - Contact: contact.md
-
-copyright: Copyright &copy; 2026 Mohammed Suhail
-
-markdown_extensions:
-  - attr_list
-  - admonition
-  - md_in_html
-  - codehilite
-  - toc:
-      permalink: true
-  - pymdownx.superfences
-  - pymdownx.details
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg

@@ -1,11 +1,10 @@
 # Contact
 
-<div class="contact-hero">
-  <h2>Let's Build Something Together</h2>
-  <p class="contact-intro">
-    Looking for a platform engineer who can design production-ready Kubernetes infrastructure, implement GitOps workflows, or build reliable cloud platforms? I'd love to hear about your challenges.
-  </p>
-</div>
+## Let's Build Something Together
+
+Looking for a platform engineer who can design production-ready Kubernetes infrastructure, implement GitOps workflows, or build reliable cloud platforms? I'd love to hear about your challenges.
+
+---
 
 ## For Hiring Managers & Recruiters
 
@@ -20,31 +19,21 @@ I'm open to opportunities involving:
 
 - Production experience with **AKS and EKS** at scale (20M+ traffic supported)
 - Deep expertise in **Terraform, Terragrunt, and infrastructure as code**
-- **GitOps and CI/CD** implementation experience with GitHub Actions, Argo CD, and Helm
+- **GitOps and CI/CD** implementation experience with Argo CD, Helm, and automated pipelines
 - **Observability foundations** using Prometheus, Grafana, and Loki
 - Strong documentation culture and knowledge sharing mindset
 
 ## Get In Touch
 
-<div class="contact-methods">
-  <div class="contact-card">
-    <h3>📧 Email</h3>
-    <p>For professional inquiries and opportunities</p>
-    <a href="mailto:mohammed.suhail.cloud@gmail.com" class="md-button md-button--primary">Send Email</a>
-  </div>
+### 📧 Email
+**For professional inquiries and opportunities**
 
-  <div class="contact-card">
-    <h3>💼 LinkedIn</h3>
-    <p>Connect professionally and view recommendations</p>
-    <a href="https://www.linkedin.com/in/mohammedsuhail-cloud/" target="_blank" class="md-button">View Profile</a>
-  </div>
+[Send Email](mailto:suhailakofficial@gmail.com){ .md-button .md-button--primary }
 
-  <div class="contact-card">
-    <h3>💻 GitHub</h3>
-    <p>Explore code, contributions, and projects</p>
-    <a href="https://github.com/mohammed-suhail-devops" target="_blank" class="md-button">View GitHub</a>
-  </div>
-</div>
+### 💼 LinkedIn
+**Connect professionally and view recommendations**
+
+[View LinkedIn Profile](https://www.linkedin.com/in/mohammedsuhail-cloud/){ .md-button }
 
 ## Quick Response
 
@@ -86,7 +75,8 @@ I'm open to discussing relocation for the right opportunity. Please include loca
 
 ---
 
-<div class="cta-footer">
-  <p><strong>Ready to discuss how I can help your team?</strong></p>
-  <a href="mailto:mohammed.suhail.cloud@gmail.com" class="md-button md-button--primary">Let's Talk</a>
-</div>
+## Ready to Connect?
+
+**Ready to discuss how I can help your team?**
+
+[Let's Talk](mailto:suhailakofficial@gmail.com){ .md-button .md-button--primary }

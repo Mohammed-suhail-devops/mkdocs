@@ -30,6 +30,8 @@ I'm open to opportunities involving:
 
 [Send Email](mailto:suhailakofficial@gmail.com){ .md-button .md-button--primary }
 
+**Email:** suhailakofficial@gmail.com
+
 ### 💼 LinkedIn
 **Connect professionally and view recommendations**
 
@@ -80,3 +82,5 @@ I'm open to discussing relocation for the right opportunity. Please include loca
 **Ready to discuss how I can help your team?**
 
 [Let's Talk](mailto:suhailakofficial@gmail.com){ .md-button .md-button--primary }
+
+**Or email directly:** suhailakofficial@gmail.com

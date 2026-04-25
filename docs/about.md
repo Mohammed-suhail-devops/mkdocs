@@ -52,8 +52,6 @@ But the real impact is in the teams I've enabled—developers who can deploy con
 ## Certifications
 
 - **Certified Kubernetes Administrator (CKA)** - Cloud Native Computing Foundation
-- Platform engineering and cloud infrastructure certifications
-
 ## How I Work
 
 ### Documentation First

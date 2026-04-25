@@ -16,7 +16,12 @@ The platform separates reusable infrastructure logic from environment-specific v
 
 ## Architecture
 
-![AKS platform provisioning architecture](assets/aks-architecture.svg)
+![AKS platform provisioning architecture](assets/aks-architecture.png)
+
+Download options:
+
+- [PNG architecture diagram](assets/aks-architecture.png)
+- [SVG architecture diagram](assets/aks-architecture.svg)
 
 ## Repository Pattern
 

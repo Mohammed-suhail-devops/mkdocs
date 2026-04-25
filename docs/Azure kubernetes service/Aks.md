@@ -18,7 +18,6 @@ The platform separates reusable infrastructure logic from environment-specific v
 
 ## Architecture
 
-```mermaid
 flowchart LR
     A["GitHub Actions<br/>plan/apply workflow"] --> B["Terragrunt<br/>resource orchestration"]
     B --> C["Terraform modules<br/>reusable Azure resources"]
@@ -27,7 +26,7 @@ flowchart LR
     C --> F["Connectivity<br/>private endpoints, peering, NAT egress"]
     D --> G["GitOps<br/>Argo CD and Helm"]
     D --> H["Observability<br/>Prometheus, Grafana, Loki"]
-```
+
 
 ## Repository Pattern
 

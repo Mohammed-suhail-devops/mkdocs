@@ -1,6 +1,6 @@
 # AKS Platform with Terraform and Terragrunt
 
-> Sanitized portfolio case study. This write-up does not copy anything from the `config` folder and does not include private environment values, secrets, subscription identifiers, exact CIDRs, production resource names, or company-specific naming.
+> Sanitized portfolio case study. This write-up does not copy anything from the official `config` folder and does not include private environment values, secrets, subscription identifiers, original CIDRs, production resource names, or company-specific naming.
 
 ## Overview
 
@@ -18,15 +18,7 @@ The platform separates reusable infrastructure logic from environment-specific v
 
 ## Architecture
 
-flowchart LR
-    A["GitHub Actions<br/>plan/apply workflow"] --> B["Terragrunt<br/>resource orchestration"]
-    B --> C["Terraform modules<br/>reusable Azure resources"]
-    C --> D["AKS platform<br/>managed identity, node pools, networking"]
-    C --> E["Platform services<br/>ACR, Key Vault, PostgreSQL, Redis"]
-    C --> F["Connectivity<br/>private endpoints, peering, NAT egress"]
-    D --> G["GitOps<br/>Argo CD and Helm"]
-    D --> H["Observability<br/>Prometheus, Grafana, Loki"]
-
+![AKS platform provisioning architecture](assets/aks-architecture.svg)
 
 ## Repository Pattern
 
@@ -34,6 +26,10 @@ The infrastructure follows a clear separation of concerns:
 
 ```text
 infrastructure/
+  config/
+    dev.yaml
+    qa.yaml
+    prod.yaml
   modules/
     aks-cluster/
     acr/
@@ -55,7 +51,67 @@ infrastructure/
     terragrunt-cd.yaml
 ```
 
-The private environment configuration is intentionally excluded from this portfolio. In the real implementation, Terragrunt reads environment data from private YAML files and passes only the required values into each Terraform module.
+The `config/` layer is required for this Terragrunt pattern because it provides environment-specific values at deploy time. The private project configuration is intentionally not copied into this portfolio. Instead, this documentation uses a fresh sample config file at [examples/aks-platform/config/dev.yaml](examples/aks-platform/config/dev.yaml).
+
+## Sample Config Structure
+
+Terragrunt reads a selected environment file and passes those values into Terraform modules. A public-safe sample looks like this:
+
+```yaml
+stack_name: aks-platform
+stack_version: "1.0.0"
+location: eastus
+
+deployment_storage_resource_group_name: rg-tfstate-example
+deployment_storage_account_name: sttfstateexample001
+deployment_storage_container_name: tfstate
+
+tags:
+  application_name: aks-platform
+  owner: platform-team
+  environment: dev
+  project: portfolio-sample
+  terraform_script_version: "1.0.0"
+
+aks_name: aks-platform-dev
+aks_sku_tier: Free
+kubernetes_version: "1.29.0"
+is_prod_env: false
+
+aks_vnet_name: vnet-aks-platform-dev
+aks_node_subnet_name: snet-aks-nodes-dev
+address_space:
+  - 10.240.0.0/16
+address_prefixes:
+  - 10.240.1.0/24
+
+network_plugin: azure
+network_plugin_mode: overlay
+network_policy: cilium
+pod_cidr: 10.241.0.0/16
+service_cidr: 10.242.0.0/16
+dns_service_ip: 10.242.0.10
+
+default:
+  min_count: 1
+  max_count: 3
+  vm_size: Standard_D4s_v5
+  os_disk_type: Managed
+  os_disk_size_gb: 128
+  os_sku: Ubuntu
+
+user:
+  min_count: 1
+  max_count: 5
+  vm_size: Standard_D8s_v5
+  os_disk_size_gb: 128
+  node_pool_zones:
+    - 1
+    - 2
+    - 3
+```
+
+These values are example-only and should be replaced before any real deployment.
 
 ## AKS Design
 
@@ -95,6 +151,11 @@ dependency "public_ip" {
   config_path = "../public-ip"
 }
 
+locals {
+  environment = lower(get_env("ENV", "dev"))
+  env         = yamldecode(file("${get_terragrunt_dir()}/../../config/${local.environment}.yaml"))
+}
+
 inputs = {
   aks_name            = local.env.aks_name
   location            = local.env.location
@@ -103,9 +164,9 @@ inputs = {
   outbound_ip_id      = dependency.public_ip.outputs.egress_ip_id
 
   default_node_pool = {
-    min_count = local.env.default_pool.min_count
-    max_count = local.env.default_pool.max_count
-    vm_size   = local.env.default_pool.vm_size
+    min_count = local.env.default.min_count
+    max_count = local.env.default.max_count
+    vm_size   = local.env.default.vm_size
   }
 }
 ```
@@ -125,23 +186,24 @@ remote_state {
   backend = "azurerm"
 
   config = {
-    resource_group_name  = "rg-tfstate-example"
-    storage_account_name = "sttfstateexample"
-    container_name       = "tfstate"
+    resource_group_name  = local.global.deployment_storage_resource_group_name
+    storage_account_name = local.global.deployment_storage_account_name
+    container_name       = local.global.deployment_storage_container_name
     key                  = "${local.stack_name}/${local.environment}/${path_relative_to_include()}/terraform.tfstate"
   }
 }
 
 locals {
   environment = lower(get_env("ENV", "dev"))
-  stack_name  = "aks-platform"
+  global      = yamldecode(file("${get_terragrunt_dir()}/../config/${local.environment}.yaml"))
+  stack_name  = local.global.stack_name
 }
 
 inputs = {
-  location = "example-region"
+  location = local.global.location
 
   tags = {
-    Application = "aks-platform"
+    Application = local.global.tags.application_name
     Environment = local.environment
     ManagedBy   = "terraform"
   }
@@ -161,9 +223,14 @@ include "root" {
   path = find_in_parent_folders()
 }
 
+locals {
+  environment = lower(get_env("ENV", "dev"))
+  global      = yamldecode(file("${get_terragrunt_dir()}/../../config/${local.environment}.yaml"))
+}
+
 inputs = {
-  resource_group_name = "rg-aks-platform-${local.environment}"
-  location            = "example-region"
+  resource_group_name = "rg-${local.global.stack_name}-${local.environment}"
+  location            = local.global.location
 }
 ```
 
@@ -202,9 +269,14 @@ dependency "resource_group" {
   config_path = "../aks-resource-group"
 }
 
+locals {
+  environment = lower(get_env("ENV", "dev"))
+  global      = yamldecode(file("${get_terragrunt_dir()}/../../config/${local.environment}.yaml"))
+}
+
 inputs = {
   public_ip_name      = "pip-aks-egress-${local.environment}"
-  location            = "example-region"
+  location            = local.global.location
   resource_group_name = dependency.resource_group.outputs.resource_group_name
   allocation_method   = "Static"
   sku                 = "Standard"
@@ -249,36 +321,41 @@ dependency "public_ip" {
   config_path = "../public-ip"
 }
 
+locals {
+  environment = lower(get_env("ENV", "dev"))
+  global      = yamldecode(file("${get_terragrunt_dir()}/../../config/${local.environment}.yaml"))
+}
+
 inputs = {
-  aks_name            = "aks-platform-${local.environment}"
-  dns_prefix          = "aks-platform-${local.environment}"
-  location            = "example-region"
+  aks_name            = local.global.aks_name
+  dns_prefix          = local.global.aks_name
+  location            = local.global.location
   resource_group_name = dependency.resource_group.outputs.resource_group_name
   resource_group_id   = dependency.resource_group.outputs.resource_group_id
   outbound_ip_id      = dependency.public_ip.outputs.egress_ip_id
 
-  network_plugin      = "azure"
-  network_plugin_mode = "overlay"
-  network_policy      = "cilium"
-  service_cidr        = "10.0.0.0/16"
-  dns_service_ip      = "10.0.0.10"
-  pod_cidr            = "10.1.0.0/16"
+  network_plugin      = local.global.network_plugin
+  network_plugin_mode = local.global.network_plugin_mode
+  network_policy      = local.global.network_policy
+  service_cidr        = local.global.service_cidr
+  dns_service_ip      = local.global.dns_service_ip
+  pod_cidr            = local.global.pod_cidr
 
   default_node_pool = {
-    min_count       = 1
-    max_count       = 3
-    vm_size         = "Standard_D4s_v5"
-    os_disk_type    = "Managed"
-    os_disk_size_gb = 128
-    os_sku          = "Ubuntu"
+    min_count       = local.global.default.min_count
+    max_count       = local.global.default.max_count
+    vm_size         = local.global.default.vm_size
+    os_disk_type    = local.global.default.os_disk_type
+    os_disk_size_gb = local.global.default.os_disk_size_gb
+    os_sku          = local.global.default.os_sku
   }
 
   user_node_pool = {
-    min_count       = 1
-    max_count       = 5
-    vm_size         = "Standard_D8s_v5"
-    os_disk_size_gb = 128
-    node_pool_zones = [1, 2, 3]
+    min_count       = local.global.user.min_count
+    max_count       = local.global.user.max_count
+    vm_size         = local.global.user.vm_size
+    os_disk_size_gb = local.global.user.os_disk_size_gb
+    node_pool_zones = local.global.user.node_pool_zones
   }
 }
 ```
@@ -458,7 +535,7 @@ This portfolio version is intentionally generalized. It documents the architectu
 - Private `config` folder content
 - Exact resource names
 - Exact Azure regions used by the original project
-- Exact network CIDRs
+- Original network CIDRs
 - Subscription, tenant, or client identifiers
 - Secrets, keys, certificates, or credentials
 - Company or customer-specific naming

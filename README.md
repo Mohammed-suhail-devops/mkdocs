@@ -195,7 +195,7 @@ Platform Engineer | Kubernetes | Azure | AWS
 - 🌐 Website: [mohammed-suhail-devops.github.io/mkdocs](https://mohammed-suhail-devops.github.io/mkdocs/)
 - 💼 LinkedIn: [mohammedsuhail-cloud](https://www.linkedin.com/in/mohammedsuhail-cloud/)
 - 🐙 GitHub: [@mohammed-suhail-devops](https://github.com/mohammed-suhail-devops)
-- 📧 Email: mohammed.suhail.cloud@gmail.com
+- 📧 Email: suhailakofficial@gmail.com
 
 ---
 

@@ -95,7 +95,3 @@ Interested in discussing platform engineering challenges or opportunities?
 
 - **LinkedIn**: [mohammedsuhail-cloud](https://www.linkedin.com/in/mohammedsuhail-cloud/)
 - **Email**: [suhailakofficial@gmail.com](mailto:suhailakofficial@gmail.com)
-
----
-
-*This portfolio showcases production work with sensitive details removed for security and confidentiality.*

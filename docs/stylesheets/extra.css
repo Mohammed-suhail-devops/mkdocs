@@ -340,3 +340,14 @@
     grid-column: 1;
   }
 }
+
+/* Paragraph Alignment */
+.md-typeset p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.md-typeset li {
+  text-align: justify;
+  text-justify: inter-word;
+}

@@ -111,3 +111,232 @@
     width: 100%;
   }
 }
+
+/* About Page Styles */
+.about-hero {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 7%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 24%, transparent);
+  border-radius: 8px;
+  margin: 1rem 0 2rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.about-hero h2 {
+  color: var(--md-accent-fg-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.about-intro {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Contact Page Styles */
+.contact-hero {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 12%, var(--md-default-bg-color)), color-mix(in srgb, var(--md-accent-fg-color) 8%, var(--md-default-bg-color)));
+  border-radius: 8px;
+  margin: 1rem 0 2rem;
+  padding: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.contact-hero h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  margin-top: 0;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.contact-methods {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 2rem 0;
+}
+
+.contact-card {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 20%, transparent);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.contact-card:hover {
+  border-color: var(--md-primary-fg-color);
+  transform: translateY(-4px);
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+
+.contact-card p {
+  color: color-mix(in srgb, var(--md-default-fg-color) 80%, transparent);
+  margin: 0.5rem 0 1rem;
+}
+
+.cta-footer {
+  background: color-mix(in srgb, var(--md-accent-fg-color) 8%, var(--md-default-bg-color));
+  border-radius: 8px;
+  margin: 3rem 0 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cta-footer p {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+/* Skills Page Styles */
+.skills-hero {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 7%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 24%, transparent);
+  border-radius: 8px;
+  margin: 1rem 0 2rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  text-align: center;
+}
+
+.skills-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.competency-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 2rem 0;
+}
+
+.competency-card {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 20%, transparent);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.competency-card h3 {
+  color: var(--md-primary-fg-color);
+  margin-top: 0;
+}
+
+.competency-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.competency-card li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.competency-card li::before {
+  color: var(--md-accent-fg-color);
+  content: "▸";
+  left: 0;
+  position: absolute;
+}
+
+.cert-showcase {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 2rem 0;
+}
+
+.cert-card {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 20%, transparent);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.cert-card.featured {
+  border: 2px solid var(--md-accent-fg-color);
+  grid-column: 1 / -1;
+}
+
+.cert-badge {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cert-card h3 {
+  margin: 0.5rem 0;
+}
+
+.cert-issuer {
+  color: var(--md-accent-fg-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
+  text-transform: uppercase;
+}
+
+.cert-description {
+  color: color-mix(in srgb, var(--md-default-fg-color) 85%, transparent);
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.cert-skills {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cert-skills li {
+  margin: 0.4rem 0;
+  padding-left: 1.3rem;
+  position: relative;
+}
+
+.cert-skills li::before {
+  color: var(--md-accent-fg-color);
+  content: "✓";
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+}
+
+.skills-cta {
+  background: color-mix(in srgb, var(--md-accent-fg-color) 8%, var(--md-default-bg-color));
+  border-radius: 8px;
+  margin: 3rem 0 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.skills-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 760px) {
+  .contact-methods,
+  .competency-grid,
+  .cert-showcase {
+    grid-template-columns: 1fr;
+  }
+  
+  .cert-card.featured {
+    grid-column: 1;
+  }
+}

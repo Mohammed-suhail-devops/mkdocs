@@ -6,6 +6,9 @@ repo_name: mohammed-suhail-devops/mkdocs
 repo_url: https://github.com/mohammed-suhail-devops/mkdocs
 edit_uri: edit/main/docs/
 
+# SEO and Social Media
+copyright: Copyright &copy; 2026 Mohammed Suhail - Platform Engineer
+
 theme:
   name: material
 
@@ -29,6 +32,7 @@ theme:
     - content.tabs.link
     - search.highlight
     - search.suggest
+    - navigation.footer
 
   icon:
     repo: fontawesome/brands/github
@@ -58,14 +62,83 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/mohammed-suhail-devops
+      name: GitHub Profile
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/mohammedsuhail-cloud/
+      name: LinkedIn Profile
+    - icon: fontawesome/solid/envelope
+      link: mailto:mohammed.suhail.cloud@gmail.com
+      name: Email Contact
+  
+  # Google Analytics
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # Replace with your actual Google Analytics ID
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback!
 
+# SEO Plugins
 plugins:
-  - search
+  - search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - social:
+      cards: true
+      cards_layout_options:
+        background_color: "#009688"
+        color: "#ffffff"
+
+# Markdown Extensions for better content
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 nav:
-  - Portfolio: index.md
+  - Home: index.md
+  - About: about.md
+  - Skills & Certifications: skills.md
   - Case Studies:
       - AKS Platform Provisioning: Azure/README.md
       - AKS Platform Deep Dive: Azure/aks-platform-case-study.md
@@ -99,6 +172,7 @@ nav:
       - Jump Host: Azure/modules/jumphost/README.md
       - VNet Peering: Azure/modules/vnet-peering/README.md
       - Cross-Environment Peering: Azure/modules/nonprod-aks-postgres-prod-peering/README.md
+  - Contact: contact.md
 
 copyright: Copyright &copy; 2026 Mohammed Suhail
 

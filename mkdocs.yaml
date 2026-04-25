@@ -1,5 +1,10 @@
 site_name: Mohammed Suhail | Platform Engineer
+site_description: Production platform engineering portfolio covering Kubernetes, Terraform, Terragrunt, GitOps, Azure, AWS, and observability.
+site_author: Mohammed Suhail
 site_url: https://mohammed-suhail-devops.github.io/mkdocs/
+repo_name: mohammed-suhail-devops/mkdocs
+repo_url: https://github.com/mohammed-suhail-devops/mkdocs
+edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -13,41 +18,94 @@ theme:
 
   features:
     - navigation.instant
+    - navigation.indexes
     - navigation.sections
+    - navigation.tabs
     - navigation.top
     - navigation.tracking
+    - toc.follow
     - content.code.copy
     - content.code.annotate
+    - content.tabs.link
     - search.highlight
     - search.suggest
+
+  icon:
+    repo: fontawesome/brands/github
 
   palette:
     # Dark Mode (Primary)
     - scheme: slate
       primary: teal
-      accent: deep purple
+      accent: amber
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
 
     # Light Mode
     - scheme: default
-      primary: indigo
-      accent: deep orange
+      primary: teal
+      accent: amber
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
 
+extra_css:
+  - stylesheets/extra.css
+
 extra:
+  generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/your-username
+      link: https://github.com/mohammed-suhail-devops
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/your-profile
+      link: https://www.linkedin.com/in/mohammedsuhail-cloud/
+
+plugins:
+  - search
+
+nav:
+  - Portfolio: index.md
+  - Case Studies:
+      - AKS Platform Provisioning: Azure/README.md
+      - AKS Platform Deep Dive: Azure/aks-platform-case-study.md
+      - Community NGINX to F5 NGINX: ingress-controller-migration/index.md
+      - F5 NGINX Auth Pattern: ingress-controller-migration/authentication.md
+  - Azure Platform:
+      - AKS Platform: Azure/aks-platform/README.md
+      - GitHub Actions: Azure/github-actions/README.md
+      - Terragrunt: Azure/terragrunt/README.md
+      - Config Pattern: Azure/config/README.md
+      - Terraform Modules Overview: Azure/terraform-modules/README.md
+      - Platform Services: Azure/platform-services/README.md
+      - Connectivity: Azure/connectivity/README.md
+      - GitOps: Azure/gitops/README.md
+      - Observability: Azure/observability/README.md
+      - Kubernetes Add-ons: Azure/kubernetes-addons/README.md
+  - Terraform Modules:
+      - Resource Group: Azure/modules/resource-group/README.md
+      - Public IP: Azure/modules/public-ip/README.md
+      - AKS Cluster: Azure/modules/aks-cluster/README.md
+      - Azure Container Registry: Azure/modules/acr/README.md
+      - Key Vault: Azure/modules/keyvault/README.md
+      - PostgreSQL Flexible Server: Azure/modules/postgresql-flexible-server/README.md
+      - Private Endpoint: Azure/modules/private-endpoint/README.md
+      - Redis: Azure/modules/redis/README.md
+      - Storage Account: Azure/modules/storage-account/README.md
+      - API Management: Azure/modules/apim/README.md
+      - Front Door: Azure/modules/front-door/README.md
+      - Azure Communication Services: Azure/modules/azure-communication-services/README.md
+      - Azure AI Foundry: Azure/modules/azure-ai-foundry/README.md
+      - Jump Host: Azure/modules/jumphost/README.md
+      - VNet Peering: Azure/modules/vnet-peering/README.md
+      - Cross-Environment Peering: Azure/modules/nonprod-aks-postgres-prod-peering/README.md
+
+copyright: Copyright &copy; 2026 Mohammed Suhail
 
 markdown_extensions:
   - attr_list
   - admonition
+  - md_in_html
   - codehilite
   - toc:
       permalink: true

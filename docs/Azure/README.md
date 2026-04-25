@@ -1,6 +1,17 @@
-# AKS Platform Provisioning Portfolio
+# AKS Platform Provisioning Case Study
 
-> Public-safe documentation for an Azure AKS platform built with Terraform, Terragrunt, GitHub Actions, GitOps, and observability tooling. The official `config/` folder is not copied here. Sample config values are created only for this portfolio.
+This case study documents a public-safe Azure Kubernetes platform built with Terraform, Terragrunt, GitHub Actions, Argo CD, Helm, and an observability stack. Sensitive values, customer identifiers, subscription details, CIDRs, secrets, and original naming conventions are intentionally excluded.
+
+## Executive Summary
+
+| Area | Platform decision |
+| --- | --- |
+| Runtime | Azure Kubernetes Service with separated system, application, and observability responsibilities. |
+| Infrastructure delivery | Terraform modules wrapped by Terragrunt resource folders for dependency-aware provisioning. |
+| Environment model | Private environment config files feed reusable modules without duplicating Terraform code. |
+| Deployment control | GitHub Actions workflow dispatch scopes plan, apply, refresh, and destroy to a selected resource. |
+| Kubernetes delivery | Argo CD and Helm manage application workloads and cluster add-ons after the platform exists. |
+| Operations | Prometheus, Grafana, Loki, endpoint checks, and Azure diagnostics support platform visibility. |
 
 ## Architecture
 
@@ -11,7 +22,27 @@ Download options:
 - [PNG architecture diagram](assets/aks-architecture.png)
 - [SVG architecture diagram](assets/aks-architecture.svg)
 
-## Component READMEs
+## What I Designed
+
+- A modular AKS platform structure that separates reusable Terraform modules from environment-specific values.
+- A Terragrunt orchestration layer with explicit resource dependencies and predictable remote state keys.
+- A controlled GitHub Actions workflow for infrastructure operations across selected environments and components.
+- A GitOps layer for Kubernetes add-ons and application deployment through Argo CD and Helm.
+- A platform services layer covering ACR, Key Vault, PostgreSQL, Redis, Storage, Private Endpoints, API Management, Front Door, and connectivity patterns.
+- An observability foundation using Kubernetes telemetry and Azure diagnostic settings.
+
+## Production Readiness Signals
+
+| Concern | Implementation evidence |
+| --- | --- |
+| Repeatability | Module contracts, resource wrappers, sample config, and documented provisioning order. |
+| Safety | Scoped workflow inputs, private configuration, no secrets in documentation, and environment-aware execution. |
+| Scale | Autoscaling node pools, dedicated workload separation, and stable egress/networking patterns. |
+| Security | Managed identity, workload identity, Key Vault integration, private endpoint patterns, and scoped access. |
+| Operability | Metrics, logs, dashboards, cluster diagnostics, and platform add-on documentation. |
+| Maintainability | Component READMEs explain purpose, dependencies, sample inputs, and expected behavior. |
+
+## Component Documentation
 
 ### Orchestration
 
@@ -69,6 +100,6 @@ Download options:
 
 ## Public-Safe Notes
 
-This portfolio documentation avoids official environment values, real resource names, original CIDRs, subscription identifiers, secrets, tenant IDs, customer names, and company-specific naming.
+The official `config/` folder is not copied here. Sample config values are created only for this portfolio under [examples/aks-platform/config/dev.yaml](examples/aks-platform/config/dev.yaml).
 
-The sample config under [examples/aks-platform/config/dev.yaml](examples/aks-platform/config/dev.yaml) is created only for documentation.
+This documentation avoids official environment values, real resource names, original CIDRs, subscription identifiers, secrets, tenant IDs, customer names, and company-specific naming.

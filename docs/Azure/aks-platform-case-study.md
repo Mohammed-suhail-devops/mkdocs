@@ -1,8 +1,10 @@
-# AKS Platform with Terraform and Terragrunt
+# AKS Platform Deep Dive: Terraform, Terragrunt, and GitOps
 
 ## Overview
 
 I designed and maintained an Azure Kubernetes Service platform using Terraform, Terragrunt, GitHub Actions, GitOps, and an observability stack. The goal was to make infrastructure repeatable across environments while keeping the Terraform code modular, reviewable, and safe to operate.
+
+This page is the implementation deep dive behind the [AKS platform case study](README.md). It focuses on the structure, dependency model, provisioning flow, and production-readiness decisions.
 
 The platform separates reusable infrastructure logic from environment-specific values:
 
@@ -14,9 +16,20 @@ The platform separates reusable infrastructure logic from environment-specific v
 | GitOps | Kubernetes application and add-on deployment through Argo CD and Helm. |
 | Observability | Metrics, logs, dashboards, and AKS diagnostics using Prometheus, Grafana, Loki, and related collectors. |
 
+## Production Readiness Snapshot
+
+| Capability | Evidence in this implementation |
+| --- | --- |
+| Environment separation | Terragrunt reads private environment YAML and passes sanitized values into reusable modules. |
+| Dependency control | Resource wrappers consume upstream outputs instead of hardcoding resource names or IDs. |
+| Operational safety | GitHub Actions scopes each run to one selected resource folder and supports plan-only workflows. |
+| Identity and secrets | Managed identity, workload identity, OIDC issuer, and Key Vault secrets provider are enabled. |
+| Network posture | Dedicated VNet/subnet, NAT egress, private endpoint patterns, and peering modules are documented. |
+| Observability | Prometheus, Grafana, Loki, collectors, and AKS diagnostic settings are included in the platform layer. |
+
 ## Architecture
 
-<img width="1600" height="977" alt="image" src="https://github.com/user-attachments/assets/42e1225b-1f56-4908-8e54-497fd09eb55a" />
+![AKS platform architecture](assets/aks-architecture.png)
 
 ## Repository Pattern
 

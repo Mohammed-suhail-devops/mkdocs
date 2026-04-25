@@ -1,118 +1,96 @@
-# Welcome to My Portfolio
+<div class="portfolio-hero">
+  <div class="portfolio-hero__copy">
+    <p class="portfolio-eyebrow">Platform Engineer | Kubernetes | Azure | AWS | Terraform | GitOps</p>
+    <h1>Mohammed Suhail</h1>
+    <p class="portfolio-title">Building production-ready cloud platforms for teams that need reliability, speed, and operational clarity.</p>
+    <p class="portfolio-lede">I design and operate Kubernetes platforms, infrastructure delivery workflows, ingress patterns, and observability foundations for real production systems. My focus is simple: make cloud infrastructure repeatable, secure, observable, and safe for product teams to use every day.</p>
+    <p class="portfolio-actions">
+      <a class="md-button md-button--primary" href="Azure/">View AKS case study</a>
+      <a class="md-button" href="ingress-controller-migration/">View ingress migration</a>
+    </p>
+  </div>
+  <div class="portfolio-snapshot">
+    <p class="snapshot-label">Production Signals</p>
+    <img class="portfolio-diagram" src="Azure/assets/aks-architecture.png" alt="AKS platform architecture diagram">
+    <dl>
+      <div><dt>20M+</dt><dd>traffic scale supported through Kubernetes autoscaling and platform tuning</dd></div>
+      <div><dt>20+</dt><dd>microservices deployed through GitOps-style delivery workflows</dd></div>
+      <div><dt>EKS + AKS</dt><dd>production platform operations across AWS and Azure environments</dd></div>
+      <div><dt>CKA</dt><dd>Certified Kubernetes Administrator</dd></div>
+    </dl>
+  </div>
+</div>
 
-# Mohammed Suhail
+## Platform Engineering Focus
 
-## Platform & DevOps Engineer | Kubernetes | AWS | Azure
+<div class="grid cards" markdown>
 
-Building and operating scalable, resilient, and production-grade cloud platforms across AWS and Azure.
+- :simple-kubernetes:{ .lg .middle } **Kubernetes Platforms**
 
----
+    EKS and AKS operations, cluster add-ons, node pool separation, ingress, autoscaling, TLS, secrets, and workload readiness.
 
-## About Me
+- :material-source-branch:{ .lg .middle } **Infrastructure Delivery**
 
-Platform Engineer with 2+ years of hands-on experience designing and managing cloud-native infrastructure.
+    Terraform, Terragrunt, GitHub Actions, reusable module contracts, environment config patterns, and controlled infrastructure workflows.
 
-Specialized in:
-- Kubernetes (EKS & AKS)
-- Infrastructure as Code (Terraform, Terragrunt)
-- CI/CD and GitOps (GitHub Actions, ArgoCD, Helm)
-- Observability (Prometheus, Grafana, Loki)
+- :material-sync:{ .lg .middle } **GitOps and Release Flow**
 
-Focused on building systems that are scalable, automated, secure, and highly observable.
+    Argo CD, Helm, ApplicationSets, service onboarding patterns, and repeatable delivery for application and platform add-ons.
 
----
+- :material-chart-line:{ .lg .middle } **Observability and Reliability**
 
-## Key Achievements
+    Prometheus, Grafana, Loki, endpoint checks, diagnostic settings, incident visibility, and platform feedback loops.
 
-- Handled 20M+ user traffic with optimized Kubernetes autoscaling  
-- Managed production-grade EKS and AKS clusters across multiple environments  
-- Built GitOps pipelines for 20+ microservices using ArgoCD and Helm  
-- Designed and implemented observability stack using Prometheus, Grafana, and Loki  
-- Strengthened platform security using IAM, TLS, NGINX WAF, and Trivy  
+</div>
 
----
+## Featured Case Studies
 
-## What This Portfolio Contains
+| Case study | What it demonstrates |
+| --- | --- |
+| [AKS Platform Provisioning](Azure/README.md) | Azure Kubernetes platform design using Terraform modules, Terragrunt orchestration, GitHub Actions, GitOps, and observability. |
+| [AKS Platform Deep Dive](Azure/aks-platform-case-study.md) | How the infrastructure is composed across config, modules, resource wrappers, node pools, managed identities, private services, and diagnostics. |
+| [Community NGINX to F5 NGINX Migration](ingress-controller-migration/index.md) | Migration planning, master/minion ingress design, validation, and routing standardization for Kubernetes workloads. |
+| [F5 NGINX Auth Request Pattern](ingress-controller-migration/authentication.md) | Enterprise-style authentication flow using internal auth subrequests, header propagation, and debugging practices. |
 
-This portfolio is a collection of:
+## What Reviewers Should Notice
 
-### Engineering Notes
-Deep dives into Kubernetes, networking, and DevOps concepts.
+- The portfolio is built around public-safe implementation evidence, not generic DevOps claims.
+- Architecture decisions are explained with tradeoffs, dependencies, and operating patterns.
+- The examples separate reusable infrastructure modules from environment-specific configuration.
+- Kubernetes delivery is treated as a platform lifecycle: provision, secure, deploy, observe, and improve.
 
-### Real-World Implementations
-Step-by-step setups and production-ready configurations.
+## Experience Snapshot
 
-### Troubleshooting Guides
-Solutions to real issues faced in cloud and Kubernetes environments.
+### Platform Engineer, BlueOcean Digital India Pvt Ltd
 
----
+June 2024 - Present
 
-## Professional Experience
+- Operate Kubernetes platforms across EKS and AKS with focus on scalability, ingress reliability, observability, and deployment automation.
+- Built GitOps and CI/CD workflows for microservice delivery using GitHub Actions, Argo CD, Helm, and Kubernetes-native release patterns.
+- Automated cloud infrastructure through Terraform and Terragrunt while keeping secrets, environment values, and state boundaries controlled.
+- Improved platform visibility using Prometheus, Grafana, Loki, and Azure diagnostics.
 
-### Platform Engineer  
-BlueOcean Digital India Pvt Ltd  
-June 2024 – Present
+### Cloud Architect, Avanexa Technologies
 
-- Owned end-to-end Kubernetes platform operations (EKS & AKS)  
-- Designed GitOps CI/CD pipelines for scalable deployments  
-- Automated infrastructure using Terraform and Terragrunt  
-- Built observability systems improving incident response time  
-- Optimized autoscaling for high-traffic production workloads  
+September 2023 - May 2024
 
----
+- Managed AWS cloud environments for multiple client workloads.
+- Designed CI/CD pipelines and infrastructure automation patterns.
+- Applied IAM, TLS, and network security practices for scalable cloud deployments.
 
-### Cloud Architect  
-Avanexa Technologies  
-Sept 2023 – May 2024
+## Skills Map
 
-- Managed multi-client AWS environments  
-- Designed and implemented CI/CD pipelines  
-- Enforced IAM and TLS-based security practices  
-- Delivered scalable and highly available cloud architectures  
+| Area | Tools and practices |
+| --- | --- |
+| Cloud | AWS, Azure, AKS, EKS, managed identities, IAM, networking |
+| Kubernetes | Cluster operations, Helm, ingress, autoscaling, secrets, node pools |
+| Infrastructure as Code | Terraform, Terragrunt, reusable modules, remote state, environment config |
+| Delivery | GitHub Actions, Argo CD, GitOps, ApplicationSets, release automation |
+| Observability | Prometheus, Grafana, Loki, diagnostics, dashboards, logging |
+| Security | TLS, WAF patterns, Key Vault, Trivy, scoped access, private endpoints |
 
----
+## Certification and Links
 
-## Core Skills
-
-Cloud: AWS, Azure  
-Containers: Kubernetes, Docker  
-CI/CD: GitHub Actions, ArgoCD, Helm  
-Infrastructure as Code: Terraform, Terragrunt  
-Monitoring: Prometheus, Grafana, Loki  
-Security: IAM, TLS, WAF, Trivy  
-
----
-
-## Featured Work (Coming Soon)
-
-- Kubernetes Autoscaling Optimization (20M+ traffic)
-- GitOps CI/CD with ArgoCD and Helm
-- Terraform Multi-Cloud Infrastructure Setup
-- Observability Stack Implementation
-
----
-
-## Certification
-
-Certified Kubernetes Administrator  
-[CKA](https://www.credly.com/badges/cb839aca-c1bc-4066-a521-e6dd2029ce27)
-
----
-
-## Connect With Me
-
-[LinkedIn](https://www.linkedin.com/in/mohammedsuhail-cloud/)
-
----
-
-## Focus Areas
-
-- Production-grade Kubernetes platforms  
-- High availability and scaling strategies  
-- DevOps automation and GitOps workflows  
-- Performance optimization under heavy load  
-
----
-
-This portfolio reflects real-world experience building and operating cloud systems at scale.
-
+- [Certified Kubernetes Administrator](https://www.credly.com/badges/cb839aca-c1bc-4066-a521-e6dd2029ce27)
+- [LinkedIn](https://www.linkedin.com/in/mohammedsuhail-cloud/)
+- [GitHub](https://github.com/mohammed-suhail-devops)

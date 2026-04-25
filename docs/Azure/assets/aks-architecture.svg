@@ -1,0 +1,73 @@
+<svg width="1180" height="720" viewBox="0 0 1180 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AKS platform architecture</title>
+  <desc id="desc">GitHub Actions runs Terragrunt, Terragrunt calls Terraform modules, and modules provision AKS, platform services, connectivity, GitOps, and observability.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2 2L10 6L2 10V2Z" fill="#344054"/>
+    </marker>
+    <filter id="shadow" x="-12%" y="-20%" width="124%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#101828" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1180" height="720" rx="18" fill="#F7F8FB"/>
+  <text x="56" y="62" fill="#17202A" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">AKS Platform Provisioning Architecture</text>
+  <text x="56" y="94" fill="#667085" font-family="Arial, Helvetica, sans-serif" font-size="16">Sanitized portfolio view: no private config, secrets, resource names, or subscription details.</text>
+
+  <rect x="54" y="138" width="222" height="108" rx="8" fill="#E3F4F2" stroke="#86C8C0" filter="url(#shadow)"/>
+  <text x="82" y="178" fill="#17202A" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">GitHub Actions</text>
+  <text x="82" y="206" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">plan / apply workflow</text>
+  <text x="82" y="228" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">manual environment input</text>
+
+  <rect x="354" y="138" width="222" height="108" rx="8" fill="#FFF4DB" stroke="#E2B95F" filter="url(#shadow)"/>
+  <text x="388" y="178" fill="#17202A" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Terragrunt</text>
+  <text x="388" y="206" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">remote state</text>
+  <text x="388" y="228" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">config and dependencies</text>
+
+  <rect x="654" y="138" width="222" height="108" rx="8" fill="#E8F5EC" stroke="#9BC9AA" filter="url(#shadow)"/>
+  <text x="684" y="178" fill="#17202A" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Terraform Modules</text>
+  <text x="684" y="206" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">reusable Azure resources</text>
+  <text x="684" y="228" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">standard module inputs</text>
+
+  <path d="M276 192H342" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M576 192H642" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M765 246V302" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="74" y="326" width="240" height="122" rx="8" fill="#FFFFFF" stroke="#D0D5DD" filter="url(#shadow)"/>
+  <text x="104" y="366" fill="#17202A" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Connectivity</text>
+  <text x="104" y="394" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">VNet and node subnet</text>
+  <text x="104" y="416" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">NAT egress</text>
+  <text x="104" y="438" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">private endpoints and peering</text>
+
+  <rect x="470" y="326" width="240" height="122" rx="8" fill="#FAE9EC" stroke="#DFA5AE" filter="url(#shadow)"/>
+  <text x="500" y="366" fill="#17202A" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">AKS Platform</text>
+  <text x="500" y="394" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">managed identity</text>
+  <text x="500" y="416" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">workload identity</text>
+  <text x="500" y="438" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">system and user node pools</text>
+
+  <rect x="866" y="326" width="240" height="122" rx="8" fill="#FFFFFF" stroke="#D0D5DD" filter="url(#shadow)"/>
+  <text x="896" y="366" fill="#17202A" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Platform Services</text>
+  <text x="896" y="394" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">ACR, Key Vault</text>
+  <text x="896" y="416" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">PostgreSQL, Redis</text>
+  <text x="896" y="438" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">storage and API gateway</text>
+
+  <path d="M654 225L218 318" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M765 246L612 315" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M876 225L962 315" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M590 448V505" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="278" y="532" width="240" height="108" rx="8" fill="#FFFFFF" stroke="#D0D5DD" filter="url(#shadow)"/>
+  <text x="308" y="572" fill="#17202A" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">GitOps</text>
+  <text x="308" y="600" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">Argo CD</text>
+  <text x="308" y="622" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">Helm-managed add-ons</text>
+
+  <rect x="662" y="532" width="240" height="108" rx="8" fill="#FFFFFF" stroke="#D0D5DD" filter="url(#shadow)"/>
+  <text x="692" y="572" fill="#17202A" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Observability</text>
+  <text x="692" y="600" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">Prometheus and Grafana</text>
+  <text x="692" y="622" fill="#475467" font-family="Arial, Helvetica, sans-serif" font-size="14">Loki and diagnostics</text>
+
+  <path d="M540 448L430 522" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M640 448L752 522" stroke="#344054" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

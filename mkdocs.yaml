@@ -1,31 +1,63 @@
-site_name: Mohammed Suhail (Platform Engineer)
-site_url: https://sitename.example
+site_name: Mohammed Suhail | Platform Engineer
+site_url: https://mohammed-suhail-devops.github.io/mkdocs/
+
 theme:
   name: material
+
   font:
-    text: Titillium Web
-    code: Red Hat Mono
+    text: Inter
+    code: JetBrains Mono
+
   logo: assets/logo.jpg
   favicon: assets/logo.jpg
+
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - content.code.annotate
+    - search.highlight
+    - search.suggest
+
   palette:
-    # Dark Mode
+    # Dark Mode (Primary)
     - scheme: slate
+      primary: teal
+      accent: deep purple
       toggle:
         icon: material/weather-sunny
-        name: Dark mode
-      primary: blue
-      accent: deep purple
+        name: Switch to light mode
 
     # Light Mode
     - scheme: default
+      primary: indigo
+      accent: deep orange
       toggle:
         icon: material/weather-night
-        name: Light mode
-      primary: blue
-      accent: deep orange
+        name: Switch to dark mode
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/your-profile
 
 markdown_extensions:
   - attr_list
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg

@@ -62,19 +62,6 @@ Prometheus, Grafana, Loki, endpoint checks, diagnostic settings, incident visibi
 
 ---
 
-## Why These Case Studies Matter
-
-Every case study on this site is based on **real production infrastructure**:
-
-✅ Handles 20M+ requests in production  
-✅ Serves 20+ microservices via GitOps  
-✅ Runs live on AWS EKS and Azure AKS  
-✅ Solves actual migration and authentication challenges
-
-**Not tutorials. Real production work.**
-
----
-
 ## Next Steps
 
 <div class="portfolio-actions">

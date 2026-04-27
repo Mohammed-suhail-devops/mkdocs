@@ -67,7 +67,3 @@ resource "azurerm_postgresql_flexible_server" "this" {
   tags                   = var.tags
 }
 ```
-
-## Notes
-
-Credentials should come from a secure secret source. They are intentionally not documented here.

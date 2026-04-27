@@ -49,7 +49,3 @@ resource "azurerm_virtual_network_peering" "aks_to_data" {
   remote_virtual_network_id = var.pg_vnet_id
 }
 ```
-
-## Notes
-
-Network values shown here are sample-only. Replace them with approved non-overlapping CIDRs before deployment.

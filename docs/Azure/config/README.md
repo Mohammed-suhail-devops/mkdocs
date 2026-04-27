@@ -67,7 +67,3 @@ inputs = {
   aks_name = local.global.aks_name
 }
 ```
-
-## Portfolio Notes
-
-All values in the sample config are documentation placeholders and should be replaced before real deployment.

@@ -59,7 +59,3 @@ resource "azurerm_virtual_network_peering" "source_to_target" {
   remote_virtual_network_id = var.target_vnet_id
 }
 ```
-
-## Notes
-
-For public portfolio documentation, avoid hardcoded subscription IDs. Pass target subscription and resource IDs through secure config or pipeline variables.

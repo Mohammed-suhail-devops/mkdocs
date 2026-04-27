@@ -97,9 +97,3 @@ Download options:
 14. `resources/ai-foundry`
 15. `resources/jumphost`
 16. Argo CD and Helm-managed Kubernetes add-ons
-
-## Public-Safe Notes
-
-The official `config/` folder is not copied here. Sample config values are created only for this portfolio under [examples/aks-platform/config/dev.yaml](examples/aks-platform/config/dev.yaml).
-
-This documentation avoids official environment values, real resource names, original CIDRs, subscription identifiers, secrets, tenant IDs, customer names, and company-specific naming.

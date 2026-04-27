@@ -62,9 +62,3 @@ elif [[ "${TG_COMMAND}" == "Destroy" ]]; then
   terragrunt destroy -lock=false -auto-approve
 fi
 ```
-
-## Portfolio Notes
-
-- The real workflow uses repository and environment secrets.
-- Secrets are not documented here.
-- The important pattern is scoped execution: one selected `resources/<component>` folder at a time.

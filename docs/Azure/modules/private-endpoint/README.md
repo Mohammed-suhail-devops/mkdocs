@@ -63,7 +63,3 @@ resource "azurerm_private_endpoint" "this" {
   }
 }
 ```
-
-## Notes
-
-Use placeholders for resource IDs in portfolio docs. Real resource IDs should remain private.

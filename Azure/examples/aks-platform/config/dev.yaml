@@ -1,0 +1,252 @@
+# Portfolio-only sample values.
+# Replace every value before using this pattern in a real Azure subscription.
+
+stack_name: aks-platform
+stack_version: "1.0.0"
+location: eastus
+
+deployment_storage_resource_group_name: rg-tfstate-example
+deployment_storage_account_name: sttfstateexample001
+deployment_storage_container_name: tfstate
+
+resource_group_name: rg-aks-platform-dev
+data_resource_group_name: rg-aks-platform-data-dev
+ai_resource_group_name: rg-aks-platform-ai-dev
+is_data: true
+is_ai: true
+is_dev: true
+is_qa: false
+is_uat: false
+is_prod: false
+is_proddr: false
+
+tags:
+  application_name: aks-platform
+  owner: platform-team
+  environment: dev
+  project: portfolio-sample
+  terraform_script_version: "1.0.0"
+
+aks_name: aks-platform-dev
+aks_sku_tier: Free
+kubernetes_version: "1.29.0"
+is_prod_env: false
+
+aks_vnet_name: vnet-aks-platform-dev
+aks_node_subnet_name: snet-aks-nodes-dev
+address_space:
+  - 10.240.0.0/16
+address_prefixes:
+  - 10.240.1.0/24
+
+network_plugin: azure
+network_plugin_mode: overlay
+network_policy: cilium
+pod_cidr: 10.241.0.0/16
+service_cidr: 10.242.0.0/16
+dns_service_ip: 10.242.0.10
+
+log_analytics_workspace_name: log-aks-platform-dev
+
+acr_name: acraksplatformdev
+acr_sku: Standard
+admin_enabled: false
+
+pip_name: pip-aks-ingress-dev
+pip_egress_name: pip-aks-egress-dev
+pip_egress_v2_name: pip-aks-egress-v2-dev
+
+key_vault_name: kv-aks-platform-dev
+key_vault_csi_driver_managed_identity_object_id: <managed-identity-object-id>
+
+postgres_name: pg-aks-platform-dev
+postgres_name_uat: pg-aks-platform-uat
+postgres_prod_name: pg-aks-platform-prod
+postgres_version: "16"
+create_mode: Default
+source_server_id: null
+postgres_vnet_name: vnet-data-dev
+postgres_subnet_name: snet-postgres-dev
+postgres_dns_zone_name: privatelink.postgres.database.azure.com
+postgres_dns_zone_link_name: postgres-dns-link-dev
+postgres_vnet_address_space:
+  - 10.250.0.0/16
+postgres_subnet_address_prefixes:
+  - 10.250.1.0/24
+postgres_dev_sku_name: GP_Standard_D2s_v3
+postgres_uat_sku_name: GP_Standard_D4s_v3
+postgres_prod_sku_name: GP_Standard_D8s_v3
+azure_extensions: azure.extensions
+azure_extensions_value: vector
+shared_preload_libraries: shared_preload_libraries
+shared_preload_libraries_value: ""
+max_worker_processes: max_worker_processes
+max_worker_processes_value: "8"
+max_logical_replication_workers: max_logical_replication_workers
+max_logical_replication_workers_value: "4"
+max_sync_workers_per_subscription: max_sync_workers_per_subscription
+max_sync_workers_per_subscription_value: "2"
+max_replication_slots: max_replication_slots
+max_replication_slots_value: "4"
+
+redis_name: redis-aks-platform-dev
+redis_capacity: 1
+redis_family: C
+redis_sku_name: Standard
+
+storage_account_name: staksplatformdev
+storage_account_bdd: staksplatformbdddev
+storage_container_name_dev: app-dev
+storage_container_name_qa: app-qa
+storage_container_name_uat: app-uat
+storage_container_name: app-data
+storage_container_name_callmedia: call-media
+
+private_endpoint_name: pe-postgres-dev
+postgres_pe_subnet_name: snet-private-endpoints-dev
+postgres_pe_subnet_cidr: 10.250.2.0/24
+private_connection_resource_id: /subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.DBforPostgreSQL/flexibleServers/<server-name>
+manual_connection_enabled: false
+ispg_src: true
+
+aks_vnet_id: /subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.Network/virtualNetworks/vnet-aks-platform-dev
+pg_vnet_id: /subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.Network/virtualNetworks/vnet-data-dev
+nonprod_aks_vnet_id: /subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.Network/virtualNetworks/vnet-nonprod-example
+prod_pg_vnet_id: /subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.Network/virtualNetworks/vnet-prod-data-example
+aks_peering_name: peer-aks-to-data-dev
+pg_peering_name: peer-data-to-aks-dev
+aks_grafana_peering_name: peer-observability-to-data-example
+pg_prod_grafana_peering_name: peer-data-to-observability-example
+allow_virtual_network_access: true
+allow_forwarded_traffic: false
+prod_postgres_private_dns_zone_name: privatelink.postgres.database.azure.com
+
+jumphost_vm_name: vm-jumphost-dev
+jumphost_admin_username: azureuser
+jumphost_subnet_prefix: 10.250.3.0/24
+jumphost_subnet_name: snet-jumphost-dev
+
+communication_service_name: acs-aks-platform-dev
+data_location: United States
+
+ai_project_name: ai-aks-platform-dev
+ai_project_display_name: AKS Platform AI Dev
+ai_project_description: Portfolio sample AI project
+ai_foundry_subdomain: ai-aks-platform-dev
+ai_location: eastus
+
+apim_name: apim-aks-platform-dev
+apim_publisher_email: platform@example.com
+apim_publisher_name: Platform Team
+apim_sku_name: Developer_1
+apim_api_protocols:
+  - https
+webhook_callback_operation_ids:
+  - webhook-callback
+dashboard_cache_operation_ids:
+  - dashboard-cache
+apim_api_name_dev: platform-api-dev
+apim_api_display_name_dev: Platform API Dev
+service_url_dev: https://api-dev.example.com
+apim_api_path_dev: platform-dev
+apim_api_name_qa: platform-api-qa
+apim_api_display_name_qa: Platform API QA
+service_url_qa: https://api-qa.example.com
+apim_api_path_qa: platform-qa
+apim_api_name_uat: platform-api-uat
+apim_api_display_name_uat: Platform API UAT
+service_url_uat: https://api-uat.example.com
+apim_api_path_uat: platform-uat
+apim_api_name_prod: platform-api-prod
+apim_api_display_name_prod: Platform API Prod
+service_url_prod: https://api.example.com
+apim_api_path_prod: platform
+
+front_door_profile_name: afd-aks-platform-dev
+front_door_sku_name: Standard_AzureFrontDoor
+front_door_app_endpoint_name: afd-app-dev
+front_door_dashboard_endpoint_name: afd-dashboard-dev
+front_door_api_endpoint_name: afd-api-dev
+origin_group_app_name: og-app-dev
+origin_group_dashboard_name: og-dashboard-dev
+origin_group_api_name: og-api-dev
+origin_app_name: origin-app-dev
+origin_dashboard_name: origin-dashboard-dev
+origin_api_name: origin-api-dev
+origin_app_host_name: app-dev.example.com
+origin_dashboard_host_name: dashboard-dev.example.com
+origin_api_host_name: api-dev.example.com
+http_port: 80
+https_port: 443
+origin_priority_primary: 1
+origin_weight_primary: 1000
+certificate_name_check_enabled: true
+health_probe_interval_in_seconds: 100
+health_probe_path: /healthz
+health_probe_path_agent: /healthz
+health_probe_protocol: Https
+health_probe_request_type: GET
+load_balancing_sample_size: 4
+load_balancing_successful_samples_required: 3
+load_balancing_additional_latency_in_milliseconds: 50
+route_app_name: route-app-dev
+route_dashboard_name: route-dashboard-dev
+route_api_name: route-api-dev
+forwarding_protocol: HttpsOnly
+https_redirect_enabled: true
+supported_protocols:
+  - Http
+  - Https
+patterns_to_match:
+  - /*
+custom_domain_app_name: app-dev
+custom_domain_app_host_name: app-dev.example.com
+custom_domain_dashboard_name: dashboard-dev
+custom_domain_dashboard_host_name: dashboard-dev.example.com
+custom_domain_api_name: api-dev
+custom_domain_api_host_name: api-dev.example.com
+certificate_type: ManagedCertificate
+minimum_tls_version: TLS12
+waf_policy_app_name: waf-app-dev
+waf_policy_dashboard_name: waf-dashboard-dev
+waf_policy_api_name: waf-api-dev
+firewall_mode: Prevention
+firewall_managed_rule_type: DefaultRuleSet
+firewall_managed_rule_version: "2.1"
+firewall_managed_rule_action: Block
+security_policy_app_name: security-app-dev
+security_policy_dashboard_name: security-dashboard-dev
+security_policy_api_name: security-api-dev
+log_analytics_workspace_sku: PerGB2018
+log_analytics_workspace_retention_in_days: 30
+diag_afd_logs:
+  - FrontDoorAccessLog
+  - FrontDoorHealthProbeLog
+
+default:
+  min_count: 1
+  max_count: 3
+  vm_size: Standard_D4s_v5
+  os_disk_type: Managed
+  os_disk_size_gb: 128
+  os_sku: Ubuntu
+
+user:
+  min_count: 1
+  max_count: 5
+  vm_size: Standard_D8s_v5
+  os_disk_size_gb: 128
+  node_pool_zones:
+    - 1
+    - 2
+    - 3
+
+observability:
+  min_count: 1
+  max_count: 2
+  vm_size: Standard_D4s_v5
+  os_disk_size_gb: 128
+  node_pool_zones:
+    - 1
+    - 2
+    - 3

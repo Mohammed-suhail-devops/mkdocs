@@ -37,32 +37,32 @@
 
 | Technology | Experience | Use Cases |
 |------------|------------|-----------|
-| Kubernetes | 5+ years | EKS & AKS production clusters, autoscaling, networking, security |
-| Terraform | 5+ years | Module architecture, state management, provider development |
-| Azure | 4+ years | AKS, ACR, networking, security, managed services |
-| Docker | 5+ years | Multi-stage builds, optimization, security scanning |
-| CI/CD Pipelines | 3+ years | Infrastructure automation, deployment workflows, release management |
+| Kubernetes | 2 years | EKS & AKS production clusters, autoscaling, networking, security |
+| Terraform | 2 years | Module architecture, state management, provider development |
+| Azure | 2 years | AKS, ACR, networking, security, managed services |
+| Docker | 2 years | Multi-stage builds, optimization, security scanning |
+| CI/CD Pipelines | 2 years | Infrastructure automation, deployment workflows, release management |
 
 ### Advanced Level ⭐⭐⭐⭐
 
 | Technology | Experience | Use Cases |
 |------------|------------|-----------|
-| AWS | 3+ years | EKS, VPC design, IAM, managed services |
-| Terragrunt | 3+ years | Multi-environment orchestration, DRY patterns |
-| Argo CD | 2+ years | GitOps workflows, ApplicationSets, sync policies |
-| Helm | 3+ years | Chart development, templating, release management |
-| Prometheus | 3+ years | Metrics design, alert rules, federation |
-| Grafana | 3+ years | Dashboard creation, data sources, templating |
+| AWS | 2 years | EKS, VPC design, IAM, managed services |
+| Terragrunt | 2 years | Multi-environment orchestration, DRY patterns |
+| Argo CD | 2 years | GitOps workflows, ApplicationSets, sync policies |
+| Helm | 2 years | Chart development, templating, release management |
+| Prometheus | 2 years | Metrics design, alert rules, federation |
+| Grafana | 2 years | Dashboard creation, data sources, templating |
 
 ### Proficient Level ⭐⭐⭐
 
 | Technology | Experience | Use Cases |
 |------------|------------|-----------|
-| PostgreSQL | 2+ years | Flexible server, high availability, backup strategies |
-| Redis | 2+ years | Caching patterns, cluster mode, performance tuning |
-| NGINX | 2+ years | Ingress controller, authentication, routing patterns |
-| Python | 3+ years | Automation scripts, tooling, infrastructure testing |
-| Bash/Shell | 5+ years | Automation, CI/CD scripts, operational tooling |
+| PostgreSQL | 2 years | Flexible server, high availability, backup strategies |
+| Redis | 2 years | Caching patterns, cluster mode, performance tuning |
+| NGINX | 2 years | Ingress controller, authentication, routing patterns |
+| Python | 2 years | Automation scripts, tooling, infrastructure testing |
+| Bash/Shell | 2 years | Automation, CI/CD scripts, operational tooling |
 
 ---
 

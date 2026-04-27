@@ -14,7 +14,7 @@
 
 ### ☁️ Cloud Platforms
 - **Azure** - AKS, ACR, Key Vault, Front Door, APIM
-- **AWS** - EKS, EC2, VPC, RDS, S3
+- **AWS** - EKS, EC2, VPC, S3, LoadBalancer
 - **Multi-cloud** - Cross-platform patterns
 
 ### 🏗️ Infrastructure as Code

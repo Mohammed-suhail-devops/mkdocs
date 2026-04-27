@@ -135,8 +135,7 @@ Extensive Terraform and Terragrunt module development with multi-environment orc
 | HCL (Terraform) | Expert | Infrastructure definition |
 | YAML | Expert | Kubernetes manifests, CI/CD |
 | Bash/Shell | Expert | Automation and scripting |
-| Python | Advanced | Tooling and automation |
-| Go | Intermediate | Operator development, tooling |
+
 
 ## Tools & Platforms
 
